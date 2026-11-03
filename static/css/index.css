@@ -175,29 +175,17 @@ body {
 
 .publication-authors a {
    color: var(--primary-color) !important;
-   text-decoration: none;
+   text-decoration: underline;
+   text-decoration-color: rgba(37, 99, 235, 0.35);
+   text-decoration-thickness: 1.5px;
+   text-underline-offset: 4px;
    font-weight: 600;
    transition: var(--transition);
-   position: relative;
-}
-
-.publication-authors a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background: var(--gradient-accent);
-    transition: var(--transition);
-}
-
-.publication-authors a:hover::after {
-    width: 100%;
 }
 
 .publication-authors a:hover {
     color: var(--primary-hover) !important;
+    text-decoration-color: currentColor;
 }
 
 .author-block {
