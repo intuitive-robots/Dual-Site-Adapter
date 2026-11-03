@@ -1099,20 +1099,8 @@ a:focus {
   white-space: nowrap;
 }
 
-.flow-notes {
-  margin: 1.5rem 0 0;
-  padding-left: 1.25em;
-  list-style: disc;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.flow-notes strong {
-  color: var(--text-primary);
-}
-
 .flow-figure figcaption {
-  margin-top: 0.9rem;
+  margin-top: 1.6rem;
   font-size: 0.95rem;
   text-align: center;
   color: var(--text-secondary);

@@ -339,8 +339,7 @@
 
         <h3 class="title is-5">Self-supervised online adaptation</h3>
         <p>
-          The adapters learn only from prediction errors between predicted and observed transitions. Neither
-          rewards nor knowledge of the changed physical parameters are required.
+          The adapters learn only from prediction errors between predicted and observed transitions.
         </p>
         <p>
           After each of the first three episodes, we update the adapters sequentially in two phases. First,
@@ -358,10 +357,6 @@
           <li class="flow-step"><strong>Update Model</strong></li>
         </ol>
         <div class="flow-return"><span>3&times;</span></div>
-        <ul class="flow-notes">
-          <li><strong>Phase 1:</strong> 25 steps, 8-frame windows, L1 loss of DUET-DINO</li>
-          <li><strong>Phase 2:</strong> 25 steps, L1 loss</li>
-        </ul>
         <figcaption><strong>Dual-Site Adapter: Training on shifted dynamics</strong></figcaption>
       </figure>
     </div>
