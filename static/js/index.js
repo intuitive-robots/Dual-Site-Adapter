@@ -1,53 +1,15 @@
-window.HELP_IMPROVE_VIDEOJS = false;
-
-// More Works Dropdown Functionality
-function toggleMoreWorks() {
-    const dropdown = document.getElementById('moreWorksDropdown');
-    const button = document.querySelector('.more-works-btn');
-    
-    if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    } else {
-        dropdown.classList.add('show');
-        button.classList.add('active');
-    }
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    const container = document.querySelector('.more-works-container');
-    const dropdown = document.getElementById('moreWorksDropdown');
-    const button = document.querySelector('.more-works-btn');
-    
-    if (container && !container.contains(event.target)) {
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    }
-});
-
-// Close dropdown on escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const dropdown = document.getElementById('moreWorksDropdown');
-        const button = document.querySelector('.more-works-btn');
-        dropdown.classList.remove('show');
-        button.classList.remove('active');
-    }
-});
-
 // Copy BibTeX to clipboard
 function copyBibTeX() {
     const bibtexElement = document.getElementById('bibtex-code');
     const button = document.querySelector('.copy-bibtex-btn');
     const copyText = button.querySelector('.copy-text');
-    
+
     if (bibtexElement) {
         navigator.clipboard.writeText(bibtexElement.textContent).then(function() {
             // Success feedback
             button.classList.add('copied');
             copyText.textContent = 'Cop';
-            
+
             setTimeout(function() {
                 button.classList.remove('copied');
                 copyText.textContent = 'Copy';
@@ -61,7 +23,7 @@ function copyBibTeX() {
             textArea.select();
             document.execCommand('copy');
             document.body.removeChild(textArea);
-            
+
             button.classList.add('copied');
             copyText.textContent = 'Cop';
             setTimeout(function() {
@@ -90,53 +52,80 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Video carousel autoplay when in view
-function setupVideoCarouselAutoplay() {
-    const carouselVideos = document.querySelectorAll('.results-carousel video');
-    
-    if (carouselVideos.length === 0) return;
-    
+// Play rollout videos while they are in view; with reduced motion, show controls instead
+function setupVideoAutoplay() {
+    const videos = document.querySelectorAll('video.autoplay-video');
+    if (videos.length === 0) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        videos.forEach(video => { video.controls = true; });
+        return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const video = entry.target;
             if (entry.isIntersecting) {
-                // Video is in view, play it
                 video.play().catch(e => {
-                    // Autoplay failed, probably due to browser policy
+                    // Autoplay blocked by browser policy: fall back to manual playback
                     console.log('Autoplay prevented:', e);
+                    video.controls = true;
                 });
             } else {
-                // Video is out of view, pause it
                 video.pause();
             }
         });
     }, {
         threshold: 0.5 // Trigger when 50% of the video is visible
     });
-    
-    carouselVideos.forEach(video => {
+
+    videos.forEach(video => {
         observer.observe(video);
+        video.addEventListener('click', () => {
+            if (video.paused) video.play(); else video.pause();
+        });
     });
 }
 
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
+// Hover/focus tooltip for the result bar charts
+function setupChartTooltips() {
+    document.querySelectorAll('.viz-root').forEach(chart => {
+        const tooltip = chart.querySelector('.viz-tooltip');
+        if (!tooltip) return;
+        const valueEl = tooltip.querySelector('.viz-tooltip-value');
+        const nameEl = tooltip.querySelector('.viz-tooltip-name');
 
-    var options = {
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		loop: true,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-    }
+        function show(mark, x, y) {
+            const sd = mark.dataset.sd;
+            valueEl.textContent = mark.dataset.value + (sd !== undefined ? ' \u00b1 ' + sd : '');
+            nameEl.textContent = mark.dataset.name;
+            tooltip.hidden = false;
 
-	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
-    
-    // Setup video autoplay for carousel
-    setupVideoCarouselAutoplay();
+            const box = chart.getBoundingClientRect();
+            const left = Math.min(x - box.left + 12, box.width - tooltip.offsetWidth - 4);
+            tooltip.style.left = Math.max(4, left) + 'px';
+            tooltip.style.top = (y - box.top - tooltip.offsetHeight - 10) + 'px';
+        }
 
-})
+        function hide() {
+            tooltip.hidden = true;
+        }
+
+        chart.querySelectorAll('.bc-hit').forEach(mark => {
+            mark.addEventListener('pointermove', e => show(mark, e.clientX, e.clientY));
+            mark.addEventListener('pointerleave', hide);
+            mark.addEventListener('focus', () => {
+                const r = mark.getBoundingClientRect();
+                const bar = mark.querySelector('.bc-bar');
+                const anchor = bar ? bar.getBoundingClientRect().right : r.left;
+                show(mark, anchor, r.top + r.height / 2);
+            });
+            mark.addEventListener('blur', hide);
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setupVideoAutoplay();
+    setupChartTooltips();
+});

@@ -3,306 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="Few-Shot Residual Adaptation of Pretrained Latent World Models">
+  <meta name="description" content="We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors.">
+  <meta name="keywords" content="world models, latent world models, test-time adaptation, residual adapters, dynamics shift, robot manipulation, model-predictive control, V-JEPA, DINOv3">
+  <meta name="author" content="Jakub Suliga, Pankhuri Vanjani, Nisarga Nilavadi, Wolfram Burgard, Rudolf Lioutikov">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Intuitive Robots Lab, Karlsruhe Institute of Technology">
+  <meta property="og:title" content="Few-Shot Residual Adaptation of Pretrained Latent World Models">
+  <meta property="og:description" content="We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors.">
+  <meta property="og:url" content="https://jakub-suliga.github.io/Dual-Site-Adapter/">
+  <meta property="og:image" content="https://jakub-suliga.github.io/Dual-Site-Adapter/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="Dual-site latent correction in a frozen world model">
+  <meta property="article:author" content="Jakub Suliga">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="world models">
+  <meta property="article:tag" content="test-time adaptation">
+  <meta property="article:tag" content="robot learning">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Few-Shot Residual Adaptation of Pretrained Latent World Models">
+  <meta name="twitter:description" content="We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors.">
+  <meta name="twitter:image" content="https://jakub-suliga.github.io/Dual-Site-Adapter/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Dual-site latent correction in a frozen world model">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="Few-Shot Residual Adaptation of Pretrained Latent World Models">
+  <meta name="citation_author" content="Suliga, Jakub">
+  <meta name="citation_author" content="Vanjani, Pankhuri">
+  <meta name="citation_author" content="Nilavadi, Nisarga">
+  <meta name="citation_author" content="Burgard, Wolfram">
+  <meta name="citation_author" content="Lioutikov, Rudolf">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="NeurIPS 2026 Workshop: 8th Robot Learning Workshop: Is Physical AI Going Zero-Shot?">
+  <meta name="citation_pdf_url" content="https://jakub-suliga.github.io/Dual-Site-Adapter/static/pdfs/paper.pdf">
+
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="theme-color" content="#1e293b">
+  <meta name="msapplication-TileColor" content="#1e293b">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Few-Shot Residual Adaptation of Pretrained Latent World Models</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+  <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Few-Shot Residual Adaptation of Pretrained Latent World Models",
+    "description": "We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Jakub Suliga", "affiliation": {"@type": "Organization", "name": "Karlsruhe Institute of Technology"}},
+      {"@type": "Person", "name": "Pankhuri Vanjani", "affiliation": {"@type": "Organization", "name": "Karlsruhe Institute of Technology"}},
+      {"@type": "Person", "name": "Nisarga Nilavadi", "affiliation": {"@type": "Organization", "name": "University of Technology Nuremberg"}},
+      {"@type": "Person", "name": "Wolfram Burgard", "affiliation": {"@type": "Organization", "name": "University of Technology Nuremberg"}},
+      {"@type": "Person", "name": "Rudolf Lioutikov", "affiliation": {"@type": "Organization", "name": "Karlsruhe Institute of Technology"}}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "datePublished": "2026",
+    "publisher": {"@type": "Organization", "name": "NeurIPS 2026 Workshop: 8th Robot Learning Workshop"},
+    "url": "https://jakub-suliga.github.io/Dual-Site-Adapter/",
+    "image": "https://jakub-suliga.github.io/Dual-Site-Adapter/static/images/social_preview.png",
+    "keywords": ["world models", "test-time adaptation", "residual adapters", "dynamics shift", "robot manipulation"],
+    "abstract": "Pretrained latent world models can support visual planning and control, but their predictions may fail when physical dynamics change at deployment. We study whether such models can adapt from only a few interactions without modifying their pretrained weights or identifying the changed physical parameters. We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors. The corrections are applied both inside the latent predictor and directly to its predicted latent state, while the pretrained world model remains frozen. We evaluate the approach in simulation and on a real robot under center-of-mass and friction shifts. These changes reduce the success of the frozen model to near zero. Using three interaction episodes for adaptation, our dual-site approach recovers 90% success under the center-of-mass shift and 100% under the modified friction on the real robot. Ablations show that correcting both locations outperforms single-site adaptation. Our diagnostics further suggest that much of the learned correction reduces a general prediction mismatch, while successful control also depends on shift-specific information captured during adaptation.",
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
+    "mainEntity": {"@type": "WebPage", "@id": "https://jakub-suliga.github.io/Dual-Site-Adapter/"},
     "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      {"@type": "Thing", "name": "World models"},
+      {"@type": "Thing", "name": "Robot learning"}
     ]
   }
   </script>
 </head>
 <body>
 
-
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
+
+  <!-- Title, authors, links -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Few-Shot Residual Adaptation of Pretrained Latent World Models</h1>
+
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+              <span class="author-block">Jakub Suliga<sup>1</sup>,</span>
+              <span class="author-block">Pankhuri Vanjani<sup>1</sup>,</span>
+              <span class="author-block">Nisarga Nilavadi<sup>2</sup>,</span>
+              <span class="author-block">Wolfram Burgard<sup>2</sup>,</span>
+              <span class="author-block">Rudolf Lioutikov<sup>1</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-6 publication-affiliations">
+              <span class="author-block"><sup>1</sup>Intuitive Robots Lab, Karlsruhe Institute of Technology</span>
+              <span class="author-block"><sup>2</sup>University of Technology Nuremberg</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="publication-venue">
+              NeurIPS 2026 Workshop &middot; 8th Robot Learning Workshop: Is Physical AI Going Zero-Shot?
+            </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="static/pdfs/paper.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
+              <!-- TODO: Uncomment and add the arXiv ID once the paper is on arXiv
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
+                </a>
+              </span>
+              -->
+
+              <!-- TODO: Uncomment and add the repository URL once the code is public
+              <span class="link-block">
+                <a href="https://github.com/REPOSITORY" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              -->
+
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-quote-right"></i></span>
+                  <span>BibTeX</span>
                 </a>
               </span>
             </div>
@@ -310,167 +187,525 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+  <!-- Teaser: same task and planner, different dynamics -->
+  <section class="hero teaser">
+    <div class="container is-max-widescreen">
+      <div class="hero-body">
+        <div class="video-grid">
+          <figure class="video-card">
+            <video class="autoplay-video" muted loop playsinline preload="metadata"
+                   poster="static/images/real_general_frozen_poster.jpg"
+                   aria-label="Real robot, general dynamics, DUET-DINO (frozen): success">
+              <source src="static/videos/real_general_frozen.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <span class="outcome is-success"><i class="fas fa-check"></i> Success</span>
+              <span class="video-condition">General dynamics</span>
+              <span class="video-method">DUET-DINO (frozen)</span>
+            </figcaption>
+          </figure>
+          <figure class="video-card">
+            <video class="autoplay-video" muted loop playsinline preload="metadata"
+                   poster="static/images/real_com_frozen_poster.jpg"
+                   aria-label="Real robot, shifted CoM, DUET-DINO (frozen): failure">
+              <source src="static/videos/real_com_frozen.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <span class="outcome is-failure"><i class="fas fa-times"></i> Failure</span>
+              <span class="video-condition">Shifted CoM</span>
+              <span class="video-method">DUET-DINO (frozen)</span>
+            </figcaption>
+          </figure>
+          <figure class="video-card is-ours">
+            <video class="autoplay-video" muted loop playsinline preload="metadata"
+                   poster="static/images/real_com_dualsite_poster.jpg"
+                   aria-label="Real robot, shifted CoM, dual-site adapter (Ours): success">
+              <source src="static/videos/real_com_dualsite.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <span class="outcome is-success"><i class="fas fa-check"></i> Success</span>
+              <span class="video-condition">Shifted CoM</span>
+              <span class="video-method">Dual-site adapter (Ours)</span>
+            </figcaption>
+          </figure>
         </div>
+        <p class="teaser-caption">
+          After three self-supervised interaction episodes, our dual-site adapter restores the push while
+          every pretrained weight stays frozen.
+        </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Pretrained latent world models can support visual planning and control, but their predictions
+              may fail when physical dynamics change at deployment. We study whether such models can adapt
+              from only a few interactions without modifying their pretrained weights or identifying the
+              changed physical parameters. We introduce a few-shot residual adaptation approach that learns
+              self-supervised corrections from latent prediction errors. The corrections are applied both
+              inside the latent predictor and directly to its predicted latent state, while the pretrained
+              world model remains frozen. We evaluate the approach in simulation and on a real robot under
+              center-of-mass and friction shifts. These changes reduce the success of the frozen model to
+              near zero. Using three interaction episodes for adaptation, our dual-site approach recovers
+              90% success under the center-of-mass shift and 100% under the modified friction on the real
+              robot. Ablations show that correcting both locations outperforms single-site adaptation. Our
+              diagnostics further suggest that much of the learned correction reduces a general prediction
+              mismatch, while successful control also depends on shift-specific information captured during
+              adaptation.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+  <!-- Method -->
+  <section class="section" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+
+      <figure class="paper-figure">
+        <img src="static/images/method.png" loading="lazy"
+             alt="Dual-site latent correction in a frozen world model.">
+        <figcaption>
+          <strong>Dual-site latent correction in a frozen world model.</strong>
+          The frozen predictor rolls out sampled actions, corrected inside every block and once more on its
+          output. The CEM controller ranks the corrected predictions by latent distance to the encoded goal
+          and executes the best action. The next observation supplies the target of the self-supervised
+          loss that trains both residuals.
+        </figcaption>
+      </figure>
+
+      <div class="content method-text">
+        <p>
+          We adapt a pretrained latent world model to the dynamics of a deployment scene without changing
+          any of its original parameters. The pipeline alternates model-predictive control with
+          self-supervised adaptation over three interaction episodes.
+        </p>
+
+        <h3 class="title is-5">Latent world model and planning</h3>
+        <p>
+          Our base model is <a href="https://arxiv.org/abs/2609.10506" target="_blank">DUET-DINO</a>, a
+          variant of <a href="https://arxiv.org/abs/2506.09985" target="_blank">V-JEPA 2-AC</a>. It predicts
+          action-conditioned latent transitions from a static side camera and a wrist camera. Planning uses a
+          one-step cross-entropy method (CEM) controller. We keep this controller fixed and adapt only the
+          latent predictions it consumes.
+        </p>
+
+        <h3 class="title is-5">Dual-site latent correction</h3>
+      </div>
+
+      <div class="columns site-cards">
+        <div class="column">
+          <div class="site-card">
+            <h3 class="title is-5">Inside the predictor</h3>
+            <p>
+              We insert Adapter<sup>+</sup> modules at two points in every block of both predictor heads,
+              after the attention residual and after the completed block. Two sites across 24 blocks and two
+              heads give 96 modules in total. They can reshape the intermediate computation without touching
+              the pretrained backbone.
+            </p>
+          </div>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+        <div class="column">
+          <div class="site-card">
+            <h3 class="title is-5">Outside the predictor</h3>
+            <p>
+              A shared token-wise residual MLP then corrects whatever the adapted predictor produces. It is
+              1280&nbsp;&rarr;&nbsp;1024&nbsp;&rarr;&nbsp;1024&nbsp;&rarr;&nbsp;1280 with GELU activations and
+              no input normalization, and sees only the predicted token, not the previous latent or the action.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div class="content method-text">
+        <p>
+          Together the internal adapters (25.6M parameters) and the external MLP (3.7M) add 29.2M trainable
+          parameters, 4.53% of the frozen predictor.
+        </p>
+
+        <h3 class="title is-5">Self-supervised online adaptation</h3>
+        <p>
+          The adapters learn only from prediction errors between predicted and observed transitions. Neither
+          rewards nor knowledge of the changed physical parameters are required.
+        </p>
+        <p>
+          After each of the first three episodes, we update the adapters sequentially in two phases. First,
+          the internal Adapter<sup>+</sup> modules are trained for 25 steps. We then freeze these adapters,
+          recompute one-step predictions, and train the external MLP for 25 steps.
+        </p>
+      </div>
+
+      <figure class="flow-figure">
+        <ol class="flow">
+          <li class="flow-step"><strong>Record 1 Episode</strong></li>
+          <li class="flow-step"><strong>Replay Buffer</strong></li>
+          <li class="flow-step is-phase"><span class="flow-kicker">Phase 1</span><strong>Train Inside Adapter</strong></li>
+          <li class="flow-step is-phase"><span class="flow-kicker">Phase 2</span><strong>Train Outside Adapter</strong></li>
+          <li class="flow-step"><strong>Update Model</strong></li>
+        </ol>
+        <div class="flow-return"><span>3&times;</span></div>
+        <ul class="flow-notes">
+          <li><strong>Phase 1:</strong> 25 steps, 8-frame windows, L1 loss of DUET-DINO</li>
+          <li><strong>Phase 2:</strong> 25 steps, L1 loss</li>
+        </ul>
+        <figcaption><strong>Dual-Site Adapter: Training on shifted dynamics</strong></figcaption>
+      </figure>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  </section>
 
 
+  <!-- Setup -->
+  <section class="section hero is-light" id="setup">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Setup</h2>
 
+      <figure class="paper-figure">
+        <img src="static/images/task.jpg" loading="lazy"
+             alt="The pushing task in simulation and on the real robot, each shown at the start of an episode and after a successful push.">
+        <figcaption>
+          The pushing task in simulation and on the real robot, each shown at the start of an episode and
+          after a successful push.
+        </figcaption>
+      </figure>
 
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div class="columns setup-row">
+        <div class="column">
+          <div class="content method-text">
+            <p>
+              <strong>Task and dynamics shifts.</strong>
+              We study goal-directed box pushing, where the robot uses its closed gripper to push a box to a
+              target pose. In the center-of-mass (CoM) shift, a hidden weight moves the center of mass to the
+              right. In the modified friction, a cloth under half of the track creates asymmetric friction across
+              the box.
+            </p>
+            <p>
+              <strong>Platforms.</strong>
+              <em>Real robot:</em> We use a Franka Panda in the DROID configuration with a static side camera and
+              a wrist camera. The three adaptation episodes contain only 24 frames in total.
+              <em>Simulation:</em> We reproduce the same two-view tabletop setup in the RoboLab simulator.
+            </p>
+            <p>
+              <strong>Protocol.</strong>
+              In simulation, we additionally evaluate a Diffusion Policy as a non-world-model baseline. An episode
+              is successful if at least half of the box crosses the goal marker, which corresponds to 8&nbsp;cm on
+              the real robot and 4.7&nbsp;cm in simulation, while its orientation stays within about 25&deg; of the
+              starting orientation.
+            </p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <figure class="paper-figure setup-photo">
+            <img src="static/images/friction_setup.jpg" loading="lazy"
+                 alt="Real robot with a striped cloth under half of the track between the box and the goal marker.">
+            <figcaption>
+              <strong>Modified friction &middot; Real Robot.</strong>
+              In the modified friction, a cloth under half of the track creates asymmetric friction across the box.
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
 
+  <!-- Results -->
+  <section class="section" id="results">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
 
-<!--BibTex citation -->
+      <div class="rq-block">
+        <p class="rq-label">RQ1</p>
+        <h3 class="title is-4">How do physical dynamics shifts affect planning with a pretrained latent world model?</h3>
+        <p>
+          Under general dynamics, Diffusion Policy achieves 96.0% success in simulation and the frozen
+          DUET-DINO model reaches 85.3% in simulation and 86.7% on the real robot. After shifting the box's
+          center of mass, success drops to 0% for all baselines. After changing friction, the frozen DUET-DINO
+          model reaches only 3.3% on the real robot.
+        </p>
+      </div>
+
+      <div class="rq-block">
+        <p class="rq-label">RQ2</p>
+        <h3 class="title is-4">How much of the planning can a few-shot adaptation recover?</h3>
+        <p>
+          Shift-specific full finetuning and LoRA recover some performance, but vary substantially across the
+          two shifts. In contrast, our shift-specific dual-site adapter reaches 90.0% success under the
+          center-of-mass shift and 100.0% under the modified friction.
+        </p>
+
+        <div class="viz-root" id="placement-chart">
+          <p class="viz-title">Success rate (%) &uarr; &middot; Simulation &middot; Shifted CoM</p>
+          <p class="viz-subtitle">Simulation results are mean &plusmn; standard deviation over three seeds (50 runs each).</p>
+          <div class="bar-chart" role="list">
+            <div class="bc-group">Frozen Base Policy</div><div class="bc-track bc-spacer"></div><div></div>
+            <div class="bc-label">Diffusion Policy</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:0.0; --s:0.0" data-name="Diffusion Policy · Frozen Base Policy" data-value="0.0" data-sd="0.0" aria-label="Diffusion Policy · Frozen Base Policy: 0.0 ± 0.0"></div></div>
+            <div class="bc-num">0.0 &plusmn; 0.0</div>
+            <div class="bc-label">DUET-DINO (frozen)</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:0.0; --s:0.0" data-name="DUET-DINO (frozen) · Frozen Base Policy" data-value="0.0" data-sd="0.0" aria-label="DUET-DINO (frozen) · Frozen Base Policy: 0.0 ± 0.0"></div></div>
+            <div class="bc-num">0.0 &plusmn; 0.0</div>
+
+            <div class="bc-group">W/ Adapters (Inside)</div><div class="bc-track bc-spacer"></div><div></div>
+            <div class="bc-label">Full finetuning</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:28.0; --s:10.0" data-name="Full finetuning · W/ Adapters (Inside)" data-value="28.0" data-sd="10.0" aria-label="Full finetuning · W/ Adapters (Inside): 28.0 ± 10.0"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">28.0 &plusmn; 10.0</div>
+            <div class="bc-label">LoRA</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:32.7; --s:9.0" data-name="LoRA · W/ Adapters (Inside)" data-value="32.7" data-sd="9.0" aria-label="LoRA · W/ Adapters (Inside): 32.7 ± 9.0"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">32.7 &plusmn; 9.0</div>
+            <div class="bc-label">Adapter<sup>+</sup></div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:18.0; --s:5.3" data-name="Adapter+ · W/ Adapters (Inside)" data-value="18.0" data-sd="5.3" aria-label="Adapter+ · W/ Adapters (Inside): 18.0 ± 5.3"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">18.0 &plusmn; 5.3</div>
+            <div class="bc-label">Residual MLP</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:10.7; --s:9.0" data-name="Residual MLP · W/ Adapters (Inside)" data-value="10.7" data-sd="9.0" aria-label="Residual MLP · W/ Adapters (Inside): 10.7 ± 9.0"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">10.7 &plusmn; 9.0</div>
+            <div class="bc-label">Bottleneck adapter</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:12.7; --s:12.2" data-name="Bottleneck adapter · W/ Adapters (Inside)" data-value="12.7" data-sd="12.2" aria-label="Bottleneck adapter · W/ Adapters (Inside): 12.7 ± 12.2"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">12.7 &plusmn; 12.2</div>
+
+            <div class="bc-group">W/ Adapters (Outside)</div><div class="bc-track bc-spacer"></div><div></div>
+            <div class="bc-label">Residual MLP</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:24.0; --s:3.5" data-name="Residual MLP · W/ Adapters (Outside)" data-value="24.0" data-sd="3.5" aria-label="Residual MLP · W/ Adapters (Outside): 24.0 ± 3.5"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">24.0 &plusmn; 3.5</div>
+            <div class="bc-label">Channel-wise scaling</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:23.3; --s:7.6" data-name="Channel-wise scaling · W/ Adapters (Outside)" data-value="23.3" data-sd="7.6" aria-label="Channel-wise scaling · W/ Adapters (Outside): 23.3 ± 7.6"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">23.3 &plusmn; 7.6</div>
+
+            <div class="bc-group">W/ Adapters (Combination)</div><div class="bc-track bc-spacer"></div><div></div>
+            <div class="bc-label">Dual-site adapter, joint</div>
+            <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:44.0; --s:6.0" data-name="Dual-site adapter, joint · W/ Adapters (Combination)" data-value="44.0" data-sd="6.0" aria-label="Dual-site adapter, joint · W/ Adapters (Combination): 44.0 ± 6.0"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num">44.0 &plusmn; 6.0</div>
+            <div class="bc-label"><strong>Dual-site adapter (Ours)</strong></div>
+            <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:56.7; --s:13.3" data-name="Dual-site adapter (Ours) · W/ Adapters (Combination)" data-value="56.7" data-sd="13.3" aria-label="Dual-site adapter (Ours) · W/ Adapters (Combination): 56.7 ± 13.3"><span class="bc-bar"></span><span class="bc-err"></span></div></div>
+            <div class="bc-num is-bold">56.7 &plusmn; 13.3</div>
+
+            <div></div>
+            <div class="bc-axis" aria-hidden="true">
+              <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+            </div>
+            <div></div>
+          </div>
+          <div class="viz-tooltip" role="status" aria-live="polite" hidden>
+            <strong class="viz-tooltip-value"></strong>
+            <span class="viz-tooltip-name"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rq-block">
+        <p class="rq-label">RQ3</p>
+        <h3 class="title is-4">How does correction placement affect adaptation?</h3>
+        <p>
+          No single-site method fully recovers planning: the best internal method, LoRA, reaches 32.7%
+          success, while the best external correction reaches 24.0%. Our dual-site adapter performs
+          substantially better at 56.7%, with sequential training also outperforming joint training (56.7%
+          vs. 44.0%). The two sites also show complementary failure modes: internal adaptation often moves in
+          the correct direction but can be unstable, while the external residual gives more consistent motion
+          but may move in the wrong direction.
+        </p>
+
+        <div class="viz-root" id="real-robot-chart">
+          <p class="viz-title">Success rate (%) &uarr; &middot; Real robot</p>
+          <p class="viz-subtitle">The four best-performing adapters are evaluated on the real robot. Modified friction is evaluated only there as it was unreliable in RoboLab. Each real-robot experiment uses 30 runs.</p>
+          <div class="bc-panels">
+            <div class="bc-panel">
+              <p class="bc-panel-title">Shifted CoM</p>
+              <div class="bar-chart" role="list">
+                <div class="bc-group">Frozen Base Policy</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">DUET-DINO (frozen)</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:0.0" data-name="DUET-DINO (frozen) · Real robot · Shifted CoM" data-value="0.0" aria-label="DUET-DINO (frozen) · Real robot · Shifted CoM: 0.0"></div></div>
+                <div class="bc-num">0.0</div>
+
+                <div class="bc-group">W/ Adapters (Inside)</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">Full finetuning</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:20.0" data-name="Full finetuning · Real robot · Shifted CoM" data-value="20.0" aria-label="Full finetuning · Real robot · Shifted CoM: 20.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">20.0</div>
+                <div class="bc-label">LoRA</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:30.0" data-name="LoRA · Real robot · Shifted CoM" data-value="30.0" aria-label="LoRA · Real robot · Shifted CoM: 30.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">30.0</div>
+
+                <div class="bc-group">W/ Adapters (Combination)</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">Dual-site adapter, joint</div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:80.0" data-name="Dual-site adapter, joint · Real robot · Shifted CoM" data-value="80.0" aria-label="Dual-site adapter, joint · Real robot · Shifted CoM: 80.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">80.0</div>
+                <div class="bc-label"><strong>Dual-site adapter (Ours)</strong></div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:90.0" data-name="Dual-site adapter (Ours) · Real robot · Shifted CoM" data-value="90.0" aria-label="Dual-site adapter (Ours) · Real robot · Shifted CoM: 90.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num is-bold">90.0</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+            <div class="bc-panel">
+              <p class="bc-panel-title">Modified friction</p>
+              <div class="bar-chart" role="list">
+                <div class="bc-group">Frozen Base Policy</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">DUET-DINO (frozen)</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:3.3" data-name="DUET-DINO (frozen) · Real robot · Modified friction" data-value="3.3" aria-label="DUET-DINO (frozen) · Real robot · Modified friction: 3.3"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">3.3</div>
+
+                <div class="bc-group">W/ Adapters (Inside)</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">Full finetuning</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:100.0" data-name="Full finetuning · Real robot · Modified friction" data-value="100.0" aria-label="Full finetuning · Real robot · Modified friction: 100.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num is-bold">100.0</div>
+                <div class="bc-label">LoRA</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:66.7" data-name="LoRA · Real robot · Modified friction" data-value="66.7" aria-label="LoRA · Real robot · Modified friction: 66.7"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">66.7</div>
+
+                <div class="bc-group">W/ Adapters (Combination)</div><div class="bc-track bc-spacer"></div><div></div>
+                <div class="bc-label">Dual-site adapter, joint</div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:90.0" data-name="Dual-site adapter, joint · Real robot · Modified friction" data-value="90.0" aria-label="Dual-site adapter, joint · Real robot · Modified friction: 90.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">90.0</div>
+                <div class="bc-label"><strong>Dual-site adapter (Ours)</strong></div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:100.0" data-name="Dual-site adapter (Ours) · Real robot · Modified friction" data-value="100.0" aria-label="Dual-site adapter (Ours) · Real robot · Modified friction: 100.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num is-bold">100.0</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="viz-tooltip" role="status" aria-live="polite" hidden>
+            <strong class="viz-tooltip-value"></strong>
+            <span class="viz-tooltip-name"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rq-block">
+        <p class="rq-label">Rollouts</p>
+        <h3 class="title is-4">More episodes</h3>
+        <figure class="video-card is-ours">
+          <video class="autoplay-video" muted loop playsinline preload="metadata"
+                 poster="static/images/sim_com_dualsite_poster.jpg"
+                 aria-label="Simulation, shifted CoM, dual-site adapter (Ours): side camera and wrist camera">
+            <source src="static/videos/sim_com_dualsite.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <span class="video-condition">Shifted CoM &middot; Simulation</span>
+            <span class="video-method">Dual-site adapter (Ours) &middot; side camera (left) and wrist camera (right)</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="rq-block">
+        <p class="rq-label">RQ4</p>
+        <h3 class="title is-4">What does the learned adaptation capture?</h3>
+        <p>
+          The general-dynamics
+          adapter is trained on the general task with the same three-episode self-supervised procedure as our
+          adapter, and it reduces prediction error almost as much as the CoM-shift adapter: it shares 95.3% of
+          the side-view and 71.7% of the wrist-view error reduction. However, under the CoM shift it achieves
+          only 6.0% success, compared with 72.0% for the CoM-shift adapter. Thus, reducing prediction error
+          alone is not sufficient for successful control.
+        </p>
+        <p>
+          Adaptation also comes at a cost: the CoM-shift adapter reaches only 54.0% on the general task,
+          compared to 85.3% for the frozen model. The adapter remains effective under changes in object color,
+          table, marker, and background, but transfers poorly between simulation and the real robot,
+          suggesting that it learns a deployment-specific correction rather than a transferable physics model.
+        </p>
+
+        <div class="viz-root" id="head-chart">
+          <p class="viz-title">Planning success by adapted predictor head under shifted center of mass</p>
+          <p class="viz-subtitle">Success rate (%) &uarr; &middot; Simulation &middot; 50 runs from a single adaptation seed</p>
+          <div class="bar-chart" role="list">
+            <div class="bc-label">Wrist head only</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:18.0" data-name="Wrist head only" data-value="18.0" aria-label="Wrist head only: 18.0"><span class="bc-bar"></span></div></div>
+            <div class="bc-num">18.0</div>
+            <div class="bc-label">Side-view head only</div>
+            <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:14.0" data-name="Side-view head only" data-value="14.0" aria-label="Side-view head only: 14.0"><span class="bc-bar"></span></div></div>
+            <div class="bc-num">14.0</div>
+            <div class="bc-label"><strong>Both heads</strong></div>
+            <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:72.0" data-name="Both heads" data-value="72.0" aria-label="Both heads: 72.0"><span class="bc-bar"></span></div></div>
+            <div class="bc-num is-bold">72.0</div>
+
+            <div></div>
+            <div class="bc-axis" aria-hidden="true">
+              <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+            </div>
+            <div></div>
+          </div>
+          <div class="viz-tooltip" role="status" aria-live="polite" hidden>
+            <strong class="viz-tooltip-value"></strong>
+            <span class="viz-tooltip-name"></span>
+          </div>
+        </div>
+
+        <p class="table-note">
+          The arrow separates the training condition from the test condition. The adapter is trained on the
+          red box in the unchanged scene and never on these variations. All entries are success rates in
+          percent over 50 runs from a single adaptation seed.
+        </p>
+        <div class="columns ablation-tables">
+          <div class="column">
+            <div class="table-container">
+              <table class="table is-fullwidth results-table is-compact">
+                <caption>(a) Adapter ablations across dynamics specificity, correction site, and cross-domain transfer.</caption>
+                <thead><tr><th>Variant / protocol</th><th class="has-text-right">Success rate (%) &uarr;</th></tr></thead>
+                <tbody>
+                  <tr class="group-row"><td colspan="2">Dynamics transfer (train &rarr; test)</td></tr>
+                  <tr><td>General dynamics &rarr; CoM shift</td><td>6.0</td></tr>
+                  <tr><td>CoM shift &rarr; CoM shift</td><td>72.0</td></tr>
+                  <tr><td>CoM shift &rarr; nominal task</td><td>54.0</td></tr>
+                  <tr class="group-row"><td colspan="2">Adapter location</td></tr>
+                  <tr><td>Wrist predictor only</td><td>18.0</td></tr>
+                  <tr><td>Side-view predictor only</td><td>14.0</td></tr>
+                  <tr class="group-row"><td colspan="2">Domain transfer (train &rarr; test)</td></tr>
+                  <tr><td>Real robot &rarr; sim (50 steps)</td><td>10.0</td></tr>
+                  <tr><td>Real robot &rarr; sim (25 steps)</td><td>0.0</td></tr>
+                  <tr><td>Sim &rarr; real robot</td><td>0.0</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="column">
+            <div class="table-container">
+              <table class="table is-fullwidth results-table is-compact">
+                <caption>(b) Appearance generalization</caption>
+                <thead><tr><th>Variation</th><th class="has-text-right">Success rate (%) &uarr;</th></tr></thead>
+                <tbody>
+                  <tr class="group-row"><td colspan="2">Red box (seen)</td></tr>
+                  <tr><td>Original scene</td><td>72.0</td></tr>
+                  <tr><td>New table</td><td>84.0</td></tr>
+                  <tr><td>New marker</td><td>54.0</td></tr>
+                  <tr><td>New background</td><td>60.0</td></tr>
+                  <tr class="group-row"><td colspan="2">Turquoise box (unseen)</td></tr>
+                  <tr><td>Original scene</td><td>74.0</td></tr>
+                  <tr><td>New table</td><td>62.0</td></tr>
+                  <tr><td>New marker</td><td>74.0</td></tr>
+                  <tr><td>New background</td><td>60.0</td></tr>
+                  <tr><td>New table + marker</td><td>54.0</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -480,41 +715,30 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{suligafew,
+  title={Few-Shot Residual Adaptation of Pretrained Latent World Models},
+  author={Suliga, Jakub and Vanjani, Pankhuri and Nilavadi, Nisarga and Burgard, Wolfram and Lioutikov, Rudolf}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
