@@ -489,7 +489,7 @@
 
             <div></div>
             <div class="bc-axis" aria-hidden="true">
-              <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+              <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
             </div>
             <div></div>
           </div>
@@ -542,7 +542,7 @@
 
                 <div></div>
                 <div class="bc-axis" aria-hidden="true">
-                  <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
                 </div>
                 <div></div>
               </div>
@@ -573,7 +573,7 @@
 
                 <div></div>
                 <div class="bc-axis" aria-hidden="true">
-                  <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
                 </div>
                 <div></div>
               </div>
@@ -613,6 +613,96 @@
           only 6.0% success, compared with 72.0% for the CoM-shift adapter. Thus, reducing prediction error
           alone is not sufficient for successful control.
         </p>
+
+        <div class="viz-root" id="error-vs-control-chart">
+          <p class="viz-title">Lower prediction error does not mean better control</p>
+          <p class="viz-subtitle">General adapter: trained without dynamics shift. CoM-shift adapter: trained on the shifted center of mass.</p>
+          <div class="bc-panels">
+            <div class="bc-panel">
+              <p class="bc-panel-title">General adapter's error reduction, relative to the CoM-shift adapter (%)</p>
+              <div class="bar-chart" role="list">
+                <div class="bc-label">Side view</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:95.3" data-name="Side view · General adapter&#x27;s error reduction relative to the CoM-shift adapter" data-value="95.3" aria-label="Side view · General adapter&#x27;s error reduction relative to the CoM-shift adapter: 95.3"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">95.3</div>
+                <div class="bc-label">Wrist view</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:71.7" data-name="Wrist view · General adapter&#x27;s error reduction relative to the CoM-shift adapter" data-value="71.7" aria-label="Wrist view · General adapter&#x27;s error reduction relative to the CoM-shift adapter: 71.7"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">71.7</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+            <div class="bc-panel">
+              <p class="bc-panel-title">Planning success under CoM shift, general vs. CoM-shift adapter (%)</p>
+              <div class="bar-chart" role="list">
+                <div class="bc-label">General adapter</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:6.0" data-name="General adapter · Planning success under CoM shift" data-value="6.0" aria-label="General adapter · Planning success under CoM shift: 6.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">6.0</div>
+                <div class="bc-label"><strong>CoM-shift adapter</strong></div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:72.0" data-name="CoM-shift adapter · Planning success under CoM shift" data-value="72.0" aria-label="CoM-shift adapter · Planning success under CoM shift: 72.0"><span class="bc-bar"></span></div></div>
+                <div class="bc-num is-bold">72.0</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="viz-tooltip" role="status" aria-live="polite" hidden>
+            <strong class="viz-tooltip-value"></strong>
+            <span class="viz-tooltip-name"></span>
+          </div>
+        </div>
+
+        <div class="viz-root" id="error-reduction-chart">
+          <p class="viz-title">Error reduction barely depends on the dynamics shift</p>
+          <p class="viz-subtitle">Error drops most where little moves.</p>
+          <div class="bc-panels">
+            <div class="bc-panel">
+              <p class="bc-panel-title">Side-view error reduction by task (%)</p>
+              <div class="bar-chart is-max-30" role="list">
+                <div class="bc-label">General dynamics</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:22.3" data-name="General dynamics · Side-view error reduction by task" data-value="22.3" aria-label="General dynamics · Side-view error reduction by task: 22.3"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">22.3</div>
+                <div class="bc-label">Shifted task</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:21.4" data-name="Shifted task · Side-view error reduction by task" data-value="21.4" aria-label="Shifted task · Side-view error reduction by task: 21.4"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">21.4</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:10">10</span><span class="is-minor" style="--t:20">20</span><span style="--t:30">30</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+            <div class="bc-panel">
+              <p class="bc-panel-title">Side-view error reduction by patch motion (%)</p>
+              <div class="bar-chart is-max-30" role="list">
+                <div class="bc-label"><strong>Least motion</strong></div>
+                <div class="bc-track"><div class="bc-hit is-highlight" role="listitem" tabindex="0" style="--v:25.6" data-name="Least motion · Side-view error reduction by patch motion" data-value="25.6" aria-label="Least motion · Side-view error reduction by patch motion: 25.6"><span class="bc-bar"></span></div></div>
+                <div class="bc-num is-bold">25.6</div>
+                <div class="bc-label">Most motion</div>
+                <div class="bc-track"><div class="bc-hit" role="listitem" tabindex="0" style="--v:16.2" data-name="Most motion · Side-view error reduction by patch motion" data-value="16.2" aria-label="Most motion · Side-view error reduction by patch motion: 16.2"><span class="bc-bar"></span></div></div>
+                <div class="bc-num">16.2</div>
+
+                <div></div>
+                <div class="bc-axis" aria-hidden="true">
+                  <span style="--t:0">0</span><span class="is-minor" style="--t:10">10</span><span class="is-minor" style="--t:20">20</span><span style="--t:30">30</span>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="viz-tooltip" role="status" aria-live="polite" hidden>
+            <strong class="viz-tooltip-value"></strong>
+            <span class="viz-tooltip-name"></span>
+          </div>
+        </div>
         <p>
           Adaptation also comes at a cost: the CoM-shift adapter reaches only 54.0% on the general task,
           compared to 85.3% for the frozen model. The adapter remains effective under changes in object color,
@@ -636,7 +726,7 @@
 
             <div></div>
             <div class="bc-axis" aria-hidden="true">
-              <span style="--t:0">0</span><span style="--t:25">25</span><span style="--t:50">50</span><span style="--t:75">75</span><span style="--t:100">100</span>
+              <span style="--t:0">0</span><span class="is-minor" style="--t:25">25</span><span style="--t:50">50</span><span class="is-minor" style="--t:75">75</span><span style="--t:100">100</span>
             </div>
             <div></div>
           </div>

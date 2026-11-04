@@ -910,6 +910,10 @@ a:focus {
   margin-top: 1rem;
 }
 
+.rq-block > .viz-root + p {
+  margin-top: 2rem;
+}
+
 .rq-label {
   font-size: 0.8rem !important;
   font-weight: 700;
@@ -1130,8 +1134,15 @@ a:focus {
 }
 
 .bar-chart {
+  --max: 100;
+  --ticks: 4;
   display: grid;
   grid-template-columns: minmax(7rem, 13rem) 1fr auto;
+}
+
+.bar-chart.is-max-30 {
+  --max: 30;
+  --ticks: 3;
 }
 
 /* Small multiples: one panel per condition, side by side */
@@ -1186,7 +1197,7 @@ a:focus {
   min-height: 32px;
   border-left: 1px solid var(--baseline);
   background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px);
-  background-size: 25% 100%;
+  background-size: calc(100% / var(--ticks)) 100%;
   background-repeat: repeat-x;
   box-shadow: inset -1px 0 0 var(--grid);
 }
@@ -1208,7 +1219,7 @@ a:focus {
   left: 0;
   top: 50%;
   height: 16px;
-  width: calc(var(--v) * 1%);
+  width: calc(var(--v) / var(--max) * 100%);
   transform: translateY(-50%);
   background: var(--series-muted);
   border-radius: 0 4px 4px 0;
@@ -1227,8 +1238,8 @@ a:focus {
 .bc-err {
   position: absolute;
   top: 50%;
-  left: calc((var(--v) - var(--s)) * 1%);
-  width: calc(var(--s) * 2%);
+  left: calc((var(--v) - var(--s)) / var(--max) * 100%);
+  width: calc(var(--s) * 2 / var(--max) * 100%);
   height: 1.5px;
   transform: translateY(-50%);
   background: var(--ink-2);
@@ -1276,7 +1287,7 @@ a:focus {
 .bc-axis span {
   position: absolute;
   top: 0.3rem;
-  left: calc(var(--t) * 1%);
+  left: calc(var(--t) / var(--max) * 100%);
   transform: translateX(-50%);
   font-size: 0.75rem;
   color: var(--ink-muted);
@@ -1395,9 +1406,8 @@ a:focus {
     padding-left: 0.5rem;
   }
 
-  /* Keep only 0, 50, 100 on narrow axes */
-  .bc-axis span:nth-child(2),
-  .bc-axis span:nth-child(4) {
+  /* Keep only the major ticks on narrow axes */
+  .bc-axis span.is-minor {
     display: none;
   }
 }
