@@ -754,8 +754,38 @@ a:focus {
   margin: 0 0.75rem;
 }
 
-.publication-venue {
+.publication-venues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.publication-venues .publication-venue {
+  margin: 0;
+}
+
+.venue-badge {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: 0.1em;
+  color: #fff;
+}
+
+.venue-badge.is-oral {
+  background: #b91c1c;
+}
+
+.venue-badge.is-spotlight {
+  background: #b45309;
 }
 
 /* Rollout videos */
